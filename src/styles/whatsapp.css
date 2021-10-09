@@ -1,0 +1,52 @@
+#whatsapp {
+    display: flex;
+    justify-content: center;
+}
+
+#section-body-whatsapp {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#div-menu-whatsapp {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+#div-whatsapp-esquerdo {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+#div-whatsapp-centro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+#div-whatsapp-direito {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+#radio-group {
+    display: flex;
+    flex-direction: row;
+}
+
+#div-botao-salvar-whatsapp {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+#qrcode {
+    width: 200px;
+    height: 200px;
+}

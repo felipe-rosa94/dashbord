@@ -1,0 +1,95 @@
+#categorias {
+    display: flex;
+    justify-content: center;
+}
+
+#section-body-categorias {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#div-menu-categorias {
+    top: 55px;
+    left: auto;
+    right: 0;
+    z-index: 1100;
+    position: sticky;
+    background-color: white;
+}
+
+#card-categorias {
+    margin: 8px;
+}
+
+#card-content-categorias-busca {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#card-content-categorias {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#icone {
+    width: 30px;
+    height: 30px;
+    margin: 4px;
+    cursor: pointer;
+}
+
+#div-categorias {
+    margin: 8px 8px 60px;
+}
+
+#div-formulario-inputs-categoria {
+    width: 100%;
+}
+
+#div-inputs-categorias {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+#card-image {
+    width: 300px;
+    height: 300px;
+}
+
+#card-content-imagem {
+    padding: 0px 20px 20px;
+}
+
+#div-botao-salvar-categorias {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#card-media-imagem-pequena {
+    width: 100px;
+    height: 100px;
+    border-radius: 4px;
+}
+
+@media screen and (max-width: 600px) {
+    #section-body-categorias {
+        width: 100%;
+    }
+
+    #card-image {
+        width: 250px;
+        height: 250px;
+    }
+}

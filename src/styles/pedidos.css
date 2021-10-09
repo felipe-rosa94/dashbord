@@ -1,0 +1,19 @@
+#section-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+#section-body-pedidos {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+@media screen and (max-width: 800px) {
+    #section-body-pedidos {
+        justify-content: center;
+    }
+}

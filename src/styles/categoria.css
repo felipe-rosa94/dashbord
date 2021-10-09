@@ -1,0 +1,47 @@
+#card-categoria {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+#card-content-categoria {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#label-categoria {
+    color: #1e1e26;
+    font-size: 18px;
+    margin: 4px;
+}
+
+#icone {
+    cursor: pointer;
+}
+
+#div-acoes-categoria {
+    display: flex;
+    width: 60%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#label-imagem {
+    color: #098dbd;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#card-content-categoria {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 800px) {
+    #div-acoes-categoria {
+        width: 100%;
+    }
+}

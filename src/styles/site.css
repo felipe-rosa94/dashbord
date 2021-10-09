@@ -1,0 +1,127 @@
+#site {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 200px;
+}
+
+#section-body-site {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#label-taxa {
+    color: #1e1e26;
+    font-size: 18px;
+    margin: 4px;
+}
+
+#div-menu-site {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+#div-site-esquerdo {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#div-site-direito {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#label-descricao {
+    margin: 4px;
+}
+
+#div-bloqueio-ceps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#card-content-ceps {
+    display: flex;
+    flex-direction: row;
+}
+
+#div-ceps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#div-formularios-ceps {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+#card-cep {
+    margin: 8px;
+    width: 100%;
+}
+
+#card-content-cep {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#icone {
+    cursor: pointer;
+}
+
+#div-botao-salvar-site {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+#card-media-banners {
+    width: 150px;
+    height: 75px;
+}
+
+#div-menu-site-banners {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+#div-banners {
+    display: flex;
+    flex-direction: row;
+}
+
+#card-banner {
+    margin: 8px;
+}
+
+#card-content-banner {
+    padding: 10px;
+}
+
+#div-site {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+    #section-body-site {
+        width: 90%;
+    }
+}

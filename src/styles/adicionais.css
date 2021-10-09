@@ -1,0 +1,147 @@
+#adicionais {
+    display: flex;
+    justify-content: center;
+}
+
+#section-body-adicionais {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#div-formulario-inputs-adicionais {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#card-content-adicionais-busca {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#card-content-adicionais {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#div-botao-salvar-adicionais {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#radio-group-adicionais {
+    display: flex;
+    flex-direction: row;
+}
+
+#div-grupo-adicionais {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#div-dialog-adicionais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 8px;
+}
+
+#card-content-dialog-adicionais {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+#card-content-dialog-itens-adicional {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#div-cadastro-etapas {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#div-nome-valor-item-adicional {
+    display: flex;
+    align-items: center;
+}
+
+#nome-adicional {
+    color: #1e1e26;
+    font-size: 18px;
+    margin: 4px;
+}
+
+#valor-adicional {
+    color: green;
+    text-align: center;
+    margin: 0 0 0 20px;
+}
+
+#card-adicionais {
+    margin-top: 8px;
+}
+
+@media screen and (max-width: 1440px) {
+    #section-body-adicionais {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    #section-body-adicionais {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #section-body-adicionais {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #section-body-adicionais {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #section-body-adicionais {
+        width: 85%;
+    }
+
+    #div-cadastro-etapas {
+        flex-direction: column;
+    }
+
+    #radio-group-adicionais {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #section-body-adicionais {
+        width: 100%;
+    }
+}

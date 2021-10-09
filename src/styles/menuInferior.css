@@ -1,0 +1,10 @@
+#menu-footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: #1e1e26;    
+}
+
+#icons {
+    color: white;
+}
