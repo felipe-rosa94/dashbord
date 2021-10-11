@@ -57,7 +57,10 @@ class Pedidos extends React.Component {
             .ref('pedidos')
             .child(usuario)
             .on('value', async data => {
-                if (data.val() !== null) await this.gravaPedido(Object.values(data.val()))
+                if (data.val() !== null)
+                    await this.gravaPedido(Object.values(data.val()))
+                else
+                    this.setState({pedidos: []})
             })
     }
 
@@ -67,13 +70,14 @@ class Pedidos extends React.Component {
             if (a.data < b.data) return 1
             return 0
         })
+        this.setState({pedidos: pedidos})
         for (let i = 0; i < pedidos.length; i++) {
             if (pedidos[i].status === 'ENVIADO') {
                 this.play()
+                this.alterarStatusPedidos(pedidos[i], 'RECEBIDO')
                 break
             }
         }
-        this.setState({pedidos: pedidos})
     }
 
     play = () => {
@@ -109,7 +113,7 @@ class Pedidos extends React.Component {
                             {
                                 // eslint-disable-next-line array-callback-return
                                 pedidos.map((i, index) => {
-                                    if (i.status === 'ENVIADO' || i.status === 'RECEBIDO')
+                                    if (i.status === 'ENVIADO' || i.status === 'RECEBIDO' || i.status === 'CONFIRMADO')
                                         return (
                                             <Pedido key={index} data={i} handleChange={this.handlePedido.bind(this)}/>)
                                 })

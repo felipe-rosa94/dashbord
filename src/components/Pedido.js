@@ -7,13 +7,13 @@ import {idPedido} from '../util'
 class Pedido extends React.Component {
 
     onClick = objeto => {
-        if (objeto.acao === 'status') {
+        if (objeto.acao === 'pronto') {
             let status = (objeto.pedido.cliente.endereco.retirar !== undefined) ? 'PRONTO' : 'ENTREGANDO'
             this.props.handleChange({pedido: objeto.pedido, status: status})
         } else if (objeto.acao === 'cancelar') {
             this.props.handleChange({pedido: objeto.pedido, status: 'CANCELADO'})
         } else if (objeto.acao === 'confirmar') {
-            this.props.handleChange({pedido: objeto.pedido, status: 'RECEBIDO'})
+            this.props.handleChange({pedido: objeto.pedido, status: 'CONFIRMADO'})
         }
     }
 
@@ -126,10 +126,10 @@ class Pedido extends React.Component {
                     <CardContent id="card-content-pedido">
                         <Button variant="outlined" fullWidth={true}
                                 onClick={() => this.onClick({
-                                    acao: (status === 'ENVIADO') ? 'confirmar' : 'status',
+                                    acao: (status === 'RECEBIDO') ? 'confirmar' : 'pronto',
                                     pedido: this.props.data
                                 })}>
-                            {status === 'ENVIADO' ? 'Confirmar recebimento' : 'Pedido pronto'}
+                            {status === 'RECEBIDO' ? 'Confirmar recebimento' : 'Pedido pronto'}
                         </Button>
                     </CardContent>
                     <CardContent id="card-content-pedido">

@@ -11,12 +11,12 @@ import {
     DialogContent,
     DialogContentText,
     DialogTitle,
-    Divider, FormControlLabel,
+    FormControlLabel,
     FormLabel, Input, Switch,
     TextField
 } from '@material-ui/core'
 import {phoneMask, cepMask, chave} from '../util'
-import {AddCircleOutline, Delete} from '@material-ui/icons'
+import {Delete} from '@material-ui/icons'
 import {createMuiTheme, MuiThemeProvider, withStyles} from '@material-ui/core/styles'
 import firebase from 'firebase'
 
@@ -273,7 +273,10 @@ class Site extends React.Component {
                         endereco,
                         statusLoja,
                         retirada,
-                        entrega
+                        entrega,
+                        pixel,
+                        latitude,
+                        longitude
                     } = data.val()
                     this.setState({
                         tituloSite: tituloSite,
@@ -287,7 +290,10 @@ class Site extends React.Component {
                         endereco: endereco,
                         statusLoja: statusLoja,
                         retirada: retirada,
-                        entrega: entrega
+                        entrega: entrega,
+                        pixel: pixel,
+                        latitude: latitude,
+                        longitude: longitude
                     })
                 }
             })
@@ -308,7 +314,10 @@ class Site extends React.Component {
             endereco,
             statusLoja,
             retirada,
-            entrega
+            entrega,
+            pixel,
+            latitude,
+            longitude
         } = this.state
         let json = {
             tituloSite: tituloSite,
@@ -321,7 +330,10 @@ class Site extends React.Component {
             endereco: endereco,
             statusLoja: statusLoja,
             retirada: retirada,
-            entrega: entrega
+            entrega: entrega,
+            pixel: pixel,
+            latitude: parseFloat(latitude),
+            longitude: parseFloat(longitude)
         }
         this.setState({dialogCarregando: true, mensagemCarregendo: 'Aguarde, salvando configurações...'})
         firebase
@@ -365,7 +377,10 @@ class Site extends React.Component {
             dialogCarregando,
             mensagemCarregendo,
             retirada,
-            entrega
+            entrega,
+            pixel,
+            latitude,
+            longitude
         } = this.state
         return (
             <MuiThemeProvider theme={theme}>
@@ -375,17 +390,41 @@ class Site extends React.Component {
                             <section id="section-body-site">
                                 <div id="div-menu-site">
                                     <div id="div-site-esquerdo">
-                                        <div>
+                                        <div style={{width: '100%'}}>
                                             <FormLabel id="label-descricao">Endereço loja</FormLabel>
                                             <TextField variant="outlined" fullWidth={true} placeholder="Endereço"
                                                        value={endereco} name="endereco"
+                                                       onChange={this.handleInput}/>
+                                        </div>
+                                        <Box p={1}/>
+                                        <div style={{width: '100%'}}>
+                                            <FormLabel id="label-descricao">Pixel Facebook</FormLabel>
+                                            <TextField variant="outlined" fullWidth={true} placeholder="Pixel Facebook"
+                                                       value={pixel} name="pixel"
                                                        onChange={this.handleInput}/>
                                         </div>
                                     </div>
                                 </div>
                                 <div id="div-menu-site">
                                     <div id="div-site-esquerdo">
-                                        <div>
+                                        <div style={{width: '100%'}}>
+                                            <FormLabel id="label-descricao">Latitude</FormLabel>
+                                            <TextField variant="outlined" fullWidth={true}
+                                                       placeholder="Latitude"
+                                                       value={latitude} name="latitude"
+                                                       onChange={this.handleInput}/>
+                                        </div>
+                                        <Box p={1}/>
+                                        <div style={{width: '100%'}}>
+                                            <FormLabel id="label-descricao">Longitude</FormLabel>
+                                            <TextField variant="outlined" fullWidth={true} placeholder="Longitude"
+                                                       value={longitude} name="longitude"
+                                                       onChange={this.handleInput}/>
+                                        </div>
+                                    </div>
+                                    <Box p={1}/>
+                                    <div id="div-site-esquerdo">
+                                        <div style={{width: '100%'}}>
                                             <FormLabel id="label-descricao">Título que aparecera no site</FormLabel>
                                             <TextField variant="outlined" fullWidth={true}
                                                        placeholder="Título no site"
@@ -393,7 +432,7 @@ class Site extends React.Component {
                                                        onChange={this.handleInput}/>
                                         </div>
                                         <Box p={1}/>
-                                        <div>
+                                        <div style={{width: '100%'}}>
                                             <FormLabel id="label-descricao">WhatsApp de contato</FormLabel>
                                             <TextField variant="outlined" fullWidth={true} placeholder="WhatsApp"
                                                        value={whatsApp} name="whatsApp"

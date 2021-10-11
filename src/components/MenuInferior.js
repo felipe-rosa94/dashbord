@@ -1,7 +1,7 @@
 import React from 'react'
 import {withRouter} from 'react-router-dom'
 import {BottomNavigation, BottomNavigationAction} from '@material-ui/core'
-import {HomeRounded, CategoryRounded, AddCircleOutline, SettingsRounded} from '@material-ui/icons'
+import {HomeRounded, AddCircleOutline, SettingsRounded} from '@material-ui/icons'
 import '../styles/menuInferior.css'
 
 class MenuInferior extends React.Component {

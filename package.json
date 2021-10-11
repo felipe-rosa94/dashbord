@@ -22,6 +22,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "deploy": "set \"GENERATE_SOURCEMAP=false\" && react-scripts build && firebase deploy",
+    "login" : "firebase login",
+    "logout" : "firebase logout",
+    "add use": "firebase add use",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

@@ -43,7 +43,7 @@ class Login extends React.Component {
                                        onChange={this.handleInput} id="label-usuario" name="usuario"/>
                         </div>
                         <div id="div-formulario-login">
-                            <TextField variant="outlined" fullWidth placeholder="Senha"
+                            <TextField variant="outlined" type="password" fullWidth placeholder="Senha"
                                        onChange={this.handleInput} id="label-senha" name="senha"/>
                         </div>
                         <div id="div-formulario-login">

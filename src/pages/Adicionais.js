@@ -99,7 +99,7 @@ class Adicionais extends React.Component {
 
     adicional = () => {
         const {id, itens, adicional, valor} = this.state
-        let json = {adicional: adicional, valor: valor !== '' ? parseFloat(valor) : 0}
+        let json = {_id: chave(), adicional: adicional, valor: valor !== '' ? parseFloat(valor) : 0}
         itens.push(json)
         this.setState({dialogCarregando: true, mensagemCarregendo: 'Aguarde...'})
         firebase
@@ -208,7 +208,7 @@ class Adicionais extends React.Component {
     }
 
     componentDidMount() {
-        usuario = localStorage.getItem(`gp:tabela`)
+        usuario = sessionStorage.getItem(`gp:usuario`)
         this.consultaAdicionais()
     }
 
